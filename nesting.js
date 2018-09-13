@@ -51,17 +51,19 @@ var employees = [
 */
 
 //Code Here
-function employeeUpdater( {
-  employees.foreach((employees, index) => {
-    if(employees.firstName === "Theo"){
-      employees.splice(index, 1);
+function employeeUpdater(){
+  for( var i = 0 ; i < employees.length; i++){
+    if ( employees[i].firstName=== "Theo"){
+      employees.splice(i,1);
     }
-    if(employees.firstName === "Lorie"){
-      employees.department = "HR"
+    if (employees[i].firstName === "Lorie"){
+      employees[i].department = 'HR';
     }
-  })
-  return employees
-});
+  }
+  return employees;
+}
+
+employeeUpdater(employees);
 
 
 ////////// PROBLEM 2 //////////
@@ -79,7 +81,19 @@ var workplaceAccidents = [12, 56, 44, 3, 29, 56, 56, 3, 7, 12];
 */
 
 //Code Here
-
+function removeDuplicates(workplaceAccidents){
+  for ( var i = 0; i < workplaceAccidents.length; i++){
+    // console.log(workplaceAccidents[i]);
+    for ( var j= i+1; j < workplaceAccidents.length; j++){
+      // console.log(workplaceAccidents[j]);
+      if ( workplaceAccidents[i]=== workplaceAccidents[j]){
+       workplaceAccidents.splice(i,1);
+       i--;
+      }
+    }
+  }
+  return workplaceAccidents;
+}
 
 
 ////////// PROBLEM 3 //////////
@@ -107,7 +121,7 @@ var cat = {
 */
 
 //Code Here
-var grumpyActivity;
+var grumpyActivity = cat.catFriends.activities;
 var fluffy2ndFriend;
 
 
