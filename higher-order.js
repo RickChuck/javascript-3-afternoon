@@ -21,8 +21,13 @@ const mixedNumbers = [6,3,1,7,5,2,6,8,9,4,2,7,9,3,1,8,4,3];
 */
 
 //Code Here
-let evenNumbers // = mixedNumbers.filter(/* Provide Your Callback Here */)
+function isEven(value, index, array){
+  if(value % 2 === 0){
+    value;
+  }
+}
 
+let evenNumbers = mixedNumbers.filter(isEven);
 
 
 ////////// PROBLEM 2 //////////
@@ -126,6 +131,12 @@ const purchases = [{"owner":"Barry","price":103},{"owner":"Bob","price":75},
   Use a high order method to create to get the sum of bobsTotal.
 */
 
-let bobsTotal //Code Here
+let bobsTotal = purchases.reduce( (total, current) => {
+  if(current.owner === 'Bob') {
+    return total + current.price;
+  } else {
+    return total;
+  }
+}, 0)
 
 

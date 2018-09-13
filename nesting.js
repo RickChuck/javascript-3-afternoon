@@ -51,7 +51,17 @@ var employees = [
 */
 
 //Code Here
-
+function employeeUpdater( {
+  employees.foreach((employees, index) => {
+    if(employees.firstName === "Theo"){
+      employees.splice(index, 1);
+    }
+    if(employees.firstName === "Lorie"){
+      employees.department = "HR"
+    }
+  })
+  return employees
+});
 
 
 ////////// PROBLEM 2 //////////
